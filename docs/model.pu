@@ -1,0 +1,45 @@
+@startuml model
+
+entity "Users" as users {
+  *id: number
+  --
+  *name: text
+  *email: text
+  *password: text
+  *deleted: boolean
+}
+
+entity "Relationships" as relationships {
+  *id: number
+  --
+  *user_id: number
+  *calendar_id: number
+  *deleted: boolean
+}
+
+entity "Calendars" as calendars {
+  *id: number
+  --
+  *name: text
+  *deleted: boolean
+  ' kind: number (private, public)
+}
+
+entity "Schedules" as schedules {
+  *id: number
+  --
+  *calendar_id: id
+  *fr_date: date
+  fr_time: time
+  *to_date: date
+  to_time: time
+  *title: text
+  description: text
+  *deleted: boolean
+}
+
+users ||--|{ relationships
+relationships }o--o{ calendars
+calendars }o--o{ schedules
+
+@enduml

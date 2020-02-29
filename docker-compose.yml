@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/app
+      - ./docker/bundle:/usr/local/bundle
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
