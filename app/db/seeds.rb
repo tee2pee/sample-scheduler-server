@@ -13,3 +13,10 @@ User.create(
   password_confirmation: 'passw0rd',
   deleted: false
 )
+User.create(
+  name: 'Deleted User',
+  email: 'deleted@example.com',
+  password: 'passw0rd',
+  password_confirmation: 'passw0rd',
+  deleted: true
+)

@@ -6,4 +6,9 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+
+  def self.from_token_request request
+    email = request.params["auth"] && request.params["auth"]["email"]
+    self.find_by email: email, deleted: false
+  end
 end
