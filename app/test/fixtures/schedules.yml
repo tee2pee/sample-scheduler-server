@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calendar_id: 1
+  fr_datetime: 2020-02-29 15:56:24
+  to_datetime: 2020-02-29 15:56:24
+  title: MyString
+  description: MyText
+  deleted: false
+
+two:
+  calendar_id: 1
+  fr_datetime: 2020-02-29 15:56:24
+  to_datetime: 2020-02-29 15:56:24
+  title: MyString
+  description: MyText
+  deleted: false

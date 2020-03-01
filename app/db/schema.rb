@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_061856) do
+ActiveRecord::Schema.define(version: 2020_02_29_155555) do
+
+  create_table "calendars", force: :cascade do |t|
+    t.string "title"
+    t.boolean "deleted"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "calendar_id"
+    t.boolean "deleted"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["calendar_id"], name: "index_relationships_on_calendar_id"
+    t.index ["user_id"], name: "index_relationships_on_user_id"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.integer "calendar_id"
+    t.datetime "fr_datetime"
+    t.datetime "to_datetime"
+    t.string "title"
+    t.text "description"
+    t.boolean "deleted"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["calendar_id"], name: "index_schedules_on_calendar_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
