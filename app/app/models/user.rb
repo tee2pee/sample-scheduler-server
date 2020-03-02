@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :relationships, -> { where(deleted: false) }
+  has_many :relationships, -> { where(deleted: false) }, dependent: :destroy
   has_many :calendars, -> { where(deleted: false) }, through: :relationships
 
   validates :name, presence: true, length: { maximum: 50 }
