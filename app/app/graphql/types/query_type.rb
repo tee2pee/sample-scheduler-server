@@ -1,9 +1,9 @@
 module Types
   class QueryType < Types::BaseObject
     
-    field :me, UserType, null: false,
+    field :my_info, UserType, null: false,
         description: 'ログインユーザー情報取得'
-    def me
+    def my_info
       context[:current_user]
     end
 
