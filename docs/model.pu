@@ -33,7 +33,7 @@ entity "Schedules" as schedules {
   *fr_datetime: datetime
   *to_datetime: datetime
   *title: string
-  description: text
+  ' description: text
   *deleted: boolean
 }
 

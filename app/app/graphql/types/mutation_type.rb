@@ -5,7 +5,6 @@ module Types
       argument :fr_datetime, GraphQL::Types::ISO8601DateTime, required: true
       argument :to_datetime, GraphQL::Types::ISO8601DateTime, required: true
       argument :title, String, required: true
-      argument :description, String, required: false
     end
 
     field :create_schedule, ScheduleType, null: false,
@@ -18,7 +17,6 @@ module Types
         fr_datetime: schedule&.[](:fr_datetime),
         to_datetime: schedule&.[](:to_datetime),
         title: schedule&.[](:title),
-        description: schedule&.[](:description),
         deleted: false
       )
     end
@@ -35,7 +33,6 @@ module Types
         fr_datetime: schedule&.[](:fr_datetime),
         to_datetime: schedule&.[](:to_datetime),
         title: schedule&.[](:title),
-        description: schedule&.[](:description)
       )
       s
     end

@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2020_02_29_155555) do
     t.datetime "fr_datetime"
     t.datetime "to_datetime"
     t.string "title"
-    t.text "description"
     t.boolean "deleted"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

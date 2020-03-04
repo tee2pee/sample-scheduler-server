@@ -39,7 +39,6 @@ Schedule.create(
   fr_datetime: DateTime.new(2020,3,1,12,0,0,'+9'),
   to_datetime: DateTime.new(2020,3,1,18,0,0,'+9'),
   title: 'Test Schedule1',
-  description: 'Test Schedule1 Description',
   deleted: false
 )
 Schedule.create(
@@ -47,7 +46,6 @@ Schedule.create(
   fr_datetime: DateTime.new(2020,3,10,12,0,0,'+9'),
   to_datetime: DateTime.new(2020,3,10,18,0,0,'+9'),
   title: 'Test Schedule2',
-  description: 'Test Schedule2 Description',
   deleted: false
 )
 Schedule.create(
@@ -55,7 +53,6 @@ Schedule.create(
   fr_datetime: DateTime.new(2020,3,20,12,0,0,'+9'),
   to_datetime: DateTime.new(2020,3,20,18,0,0,'+9'),
   title: 'Test Schedule3',
-  description: 'Test Schedule3 Description',
   deleted: false
 )
 Schedule.create(
@@ -63,7 +60,6 @@ Schedule.create(
   fr_datetime: DateTime.new(2020,3,30,12,0,0,'+9'),
   to_datetime: DateTime.new(2020,3,30,18,0,0,'+9'),
   title: 'Deleted Schedule',
-  description: 'Deleted Schedule Description',
   deleted: true
 )
 

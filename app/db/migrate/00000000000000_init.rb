@@ -23,7 +23,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.datetime :fr_datetime
       t.datetime :to_datetime
       t.string :title
-      t.text :description
       t.boolean :deleted
 
       t.timestamps
