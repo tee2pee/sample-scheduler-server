@@ -1,4 +1,4 @@
-class Init < ActiveRecord::Migration[6.0]
+class Init < ActiveRecord::Migration[5.0]
   def change
 
     create_table :users do |t|
