@@ -27,7 +27,7 @@ class Init < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_index :schedules, [:calendar]
+    add_index :schedules, [:calendar_id]
 
     create_table :relationships do |t|
       t.belongs_to :user
@@ -36,8 +36,8 @@ class Init < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_index :relationships, [:user]
-    add_index :relationships, [:user, :calendar], unique: true
+    add_index :relationships, [:user_id]
+    add_index :relationships, [:user_id, :calendar_id], unique: true
 
   end
 end
