@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:3030'
+    origins ENV.fetch('CLIENT_ORIGIN', 'tee2pee-sample-scheduler.netlify.com')
 
     resource '*',
       headers: :any,
